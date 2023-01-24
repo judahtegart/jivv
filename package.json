@@ -1,5 +1,5 @@
 {
-  "name": "Jivv",
+  "name": "jivv",
   "version": "1.0.0",
   "description": "My discord bot project.",
   "main": "./src/index.js",
