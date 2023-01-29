@@ -1,6 +1,15 @@
-require('dotenv').config()
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const { Intents } = require('discord.js');
+const Enmap = require("enmap");
+const client = new Discord.Client({
+    ws: { intents: Intents.ALL },
+});
+require("dotenv").config();
+const prefix = process.env.PREFIX;
+
+const roleList = new Enmap();
+const muteList = new Enmap();
+
 
 client.on('ready', () => {
 console.log(`Logged in as ${client.user.tag}!`);
