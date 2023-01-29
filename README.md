@@ -15,4 +15,4 @@ My Discord bot project. Add [here](https://discord.com/oauth2/authorize?client_i
 - **/role** - adds/removes role(s) for a member
 - **/nick** - changes the nickname of a member
 - **/unban** - unbans a member
-- **/tempban** temporarily bans a member
+- **/tempban** - temporarily bans a member
