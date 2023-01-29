@@ -1,10 +1,16 @@
 const Discord = require('discord.js');
-const { Intents } = require('discord.js');
 const Enmap = require("enmap");
-const client = new Discord.Client({
-    ws: { intents },
-  });
-  
+const { Client, GatewayIntentBits } = require('discord.js');
+
+const client = new Client({
+	intents: [
+		GatewayIntentBits.Guilds,
+		GatewayIntentBits.GuildMessages,
+		GatewayIntentBits.MessageContent,
+		GatewayIntentBits.GuildMembers,
+	],
+});
+
 require("dotenv").config();
 const prefix = process.env.PREFIX;
 
