@@ -2,8 +2,9 @@ const Discord = require('discord.js');
 const { Intents } = require('discord.js');
 const Enmap = require("enmap");
 const client = new Discord.Client({
-    ws: { intents: Intents.ALL },
-});
+    ws: { intents },
+  });
+  
 require("dotenv").config();
 const prefix = process.env.PREFIX;
 
