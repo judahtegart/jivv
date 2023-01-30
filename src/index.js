@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const Enmap = require("enmap");
-const { Client, GatewayIntentBits } = require('discord.js');
+const { Client, GatewayIntentBits, Partials } = require('discord.js');
 
 const client = new Client({
 	intents: [
@@ -89,7 +89,7 @@ function unmuteCommand(message, args) {
     }
 }
       
-client.on('message', message => {
+client.on('messageCreate', message => {
     if (message.content.startsWith("/ban")) {
         banCommand(message, message.content.split(" ").slice(1));
     }
